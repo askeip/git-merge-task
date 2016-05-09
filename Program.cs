@@ -30,6 +30,8 @@ namespace Kontur.Courses.Git
 			bool isDigit = char.IsDigit(line[0]);
 			foreach (var ch in line)
 			{
+                if (ch == ' ')
+                    continue;
 				if (char.IsDigit(ch) != isDigit)
 				{
 					res.Add("");
